@@ -108,6 +108,11 @@ D Two pin crystal, two ground/package pins (pin2 and 3) small symbol
 K quartz ceramic resonator oscillator
 $ENDCMP
 #
+$CMP D_Schottky_SOD123
+D DIODE SCHOTTKY 100V 1A SOD123
+K DIODE SCHOTTKY 100V 1A SOD123
+$ENDCMP
+#
 $CMP D_Zener_13V
 D DIODE ZENER 13V 3W SMB
 K DIODE ZENER 13V 3W SMB
@@ -243,6 +248,12 @@ K single opamp
 F http://www.ti.com/lit/ds/symlink/opa376.pdf
 $ENDCMP
 #
+$CMP POT_TRIM
+D TC33X-103E 10k Trim Potentiometer
+K resistor variable trim pot trimmer
+F http://www.bourns.com/docs/Product-Datasheets/TC33.pdf
+$ENDCMP
+#
 $CMP Pushbutton
 D Pushbutton
 K Button
@@ -279,6 +290,11 @@ $ENDCMP
 #
 $CMP R_1k
 D Res 1k 1%
+K r res resistor
+$ENDCMP
+#
+$CMP R_1k_HS
+D 3k ohm 100 w rating
 K r res resistor
 $ENDCMP
 #
@@ -319,6 +335,11 @@ $ENDCMP
 $CMP R_3k_HS
 D 3k ohm 100 w rating
 K r res resistor
+$ENDCMP
+#
+$CMP R_402k
+D RES SMD 402K OHM 1% 1/8W 0805
+K RES SMD 402K OHM 1% 1/8W 0805
 $ENDCMP
 #
 $CMP R_475
