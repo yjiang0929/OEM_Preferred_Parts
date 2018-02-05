@@ -6,9 +6,20 @@ K N-Channel Switching MOSFET
 F https://www.fairchildsemi.com/datasheets/2N/2N7002.pdf
 $ENDCMP
 #
+$CMP 3P4T_rotary_switch
+D 3P4T rotary switch
+K 3P4T 3 pole 4 terminal switch rotary programming
+$ENDCMP
+#
 $CMP 4.7kR
 D Resistor
 K r res resistor
+$ENDCMP
+#
+$CMP 5K
+D 5k 1% 35W Power Resistor TO-263 DPAK
+K r res resistor power 
+F https://riedon.com/media/pdf/PFS35.pdf
 $ENDCMP
 #
 $CMP AD620
@@ -73,8 +84,9 @@ K connector
 $ENDCMP
 #
 $CMP BSS308PE
-D P-Channel 30V 2A (Ta) 500mW (Ta) Surface Mount PG-SOT23-3
-K pmos p-mos p-mosfet transistor
+D -30V Vds, -2 A Id, P-channel MOSFET, SOT-23
+K P-Channel MOSFET
+F https://www.infineon.com/dgdl/Infineon-BSS308PE-DS-v02_03-en.pdf?fileId=db3a304330f686060131099c80400073
 $ENDCMP
 #
 $CMP C
@@ -115,6 +127,11 @@ $ENDCMP
 #
 $CMP C_10uF
 D CAP CER 10UF 10V X5R 0805
+$ENDCMP
+#
+$CMP C_10uF_16V
+D CAP CER 10UF 16V X5R 0805
+K CAP CER 10UF 16V X5R 0805
 $ENDCMP
 #
 $CMP C_1uF
@@ -163,6 +180,11 @@ $ENDCMP
 #
 $CMP F_1.1A_12V
 D PTC Fuse 12V 1.1A
+K Fuse F
+$ENDCMP
+#
+$CMP F_21mA_420V
+D PTC Fuse 420V 21mA
 K Fuse F
 $ENDCMP
 #
@@ -221,10 +243,25 @@ D LED_0805
 K led diode
 $ENDCMP
 #
+$CMP LED_0805_Amber
+D LED AMBER DIFFUSED 0805 SMD
+K LED AMBER DIFFUSED 0805 SMD
+$ENDCMP
+#
+$CMP LED_0805_Red
+D LED AMBER DIFFUSED 0805 SMD
+K LED AMBER DIFFUSED 0805 SMD
+$ENDCMP
+#
 $CMP LM2937
 D 1A Low Dropout regulator, positive, 1.5V fixed output, SOT-223
 K linear regulator ldo fixed positive obsolete
 F http://www.diodes.com/datasheets/AP1117.pdf
+$ENDCMP
+#
+$CMP LM324DT
+D Four channel Op-Amp, General Purpose, 1.3 MHz, 14-SOIC
+K operational amplifier opamp four channel 4
 $ENDCMP
 #
 $CMP LM3480
@@ -241,6 +278,11 @@ $ENDCMP
 #
 $CMP LMV341
 D IC OPAMP GP 1MHZ RRO SOT23-6
+$ENDCMP
+#
+$CMP LR8K4-G
+D Linear Voltage Regulators 450V Adj 3 Termnl
+K Linear Voltage Regulators 450V Adj 3 Termnl
 $ENDCMP
 #
 $CMP L_4.7uH
@@ -376,6 +418,12 @@ K single opamp
 F http://www.ti.com/lit/ds/symlink/opa376.pdf
 $ENDCMP
 #
+$CMP PFS35-5KF1
+D 5K 1% 35W Power Resistor TO-263 DPAK
+K r res resistor power dpak
+F https://riedon.com/media/pdf/PFS35.pdf
+$ENDCMP
+#
 $CMP POT_TRIM
 D TC33X-103E 10k Trim Potentiometer
 K resistor variable trim pot trimmer
@@ -417,6 +465,11 @@ D Res 10k 1%
 K r res resistor
 $ENDCMP
 #
+$CMP R_178k
+D RES SMD 178K OHM 0.1% 1/8W 0805
+K RES SMD 178K OHM 0.1% 1/8W 0805
+$ENDCMP
+#
 $CMP R_1M
 D RES SMD 1M OHM 5% 1/8W 0805
 $ENDCMP
@@ -455,14 +508,29 @@ D RES 22k 5% 1/8W 0805
 K r res resistor
 $ENDCMP
 #
+$CMP R_270k
+D RES SMD 270K OHM 0.1% 1/8W 0805
+K RES SMD 270K OHM 0.1% 1/8W 0805
+$ENDCMP
+#
 $CMP R_3.01k
 D Res 3.01k 1%
+K r res resistor
+$ENDCMP
+#
+$CMP R_30.1k
+D Resistor
 K r res resistor
 $ENDCMP
 #
 $CMP R_300k
 D Res 300k 0.1% 0805 1/8W
 K r res resistor
+$ENDCMP
+#
+$CMP R_330
+D RES SMD 330 OHM 1% 1/8W 0805
+K RES SMD 330 OHM 1% 1/8W 0805
 $ENDCMP
 #
 $CMP R_3k
@@ -515,9 +583,26 @@ D RES SMD 604K OHM 1% 1/8W 0805
 K RES SMD 604K OHM 1% 1/8W 0805
 $ENDCMP
 #
+$CMP R_71.5k
+D Resistor
+K r res resistor
+$ENDCMP
+#
 $CMP R_Strain_Gauge
 D Dual Element Strain Gage
 K r res resistor strain_gauge variable potentiometer
+$ENDCMP
+#
+$CMP SN74LVC1G02
+D Single 2-Input Positive NOR-Gate
+K logic nor
+F SN74LCC1G02_datasheet(NOR).pdf
+$ENDCMP
+#
+$CMP SN74LVC1G08
+D Single 2-Input Positive-AND Gate
+K logic and
+F SN74LCC1G08_datasheet(AND).pdf
 $ENDCMP
 #
 $CMP SN74LVC1G123DCTR
@@ -538,6 +623,11 @@ $ENDCMP
 $CMP TLP175A
 D PHOTO RELAY LOW TRIG CURR SO6
 K PHOTO RELAY LOW TRIG CURR SO6
+$ENDCMP
+#
+$CMP TLV3701QDBVRG4Q1
+D IC COMPARATR NANOPWR P-P SOT23-5
+K IC COMPARATR NANOPWR P-P SOT23-5
 $ENDCMP
 #
 $CMP TPS561201
@@ -564,6 +654,11 @@ K single opamp
 F www.st.com/resource/en/datasheet/tsv911.pdf
 $ENDCMP
 #
+$CMP TSX631AIYLT
+D IC OPAMP R-R 16V CMOS SOT23-5
+K IC OPAMP R-R 16V CMOS SOT23-5
+$ENDCMP
+#
 $CMP Ultrafit_2
 D ULTRAFIT CONN HDR 02CKT
 K ULTRAFIT CONN HDR 02CKT
@@ -572,6 +667,12 @@ $ENDCMP
 $CMP Ultrafit_4
 D Ultrafit 4 Pin Connector
 K ultrafit conn connector ultra
+$ENDCMP
+#
+$CMP ZXRE160
+D IC VREF SHUNT ADJ SOT353
+K IC VREF SHUNT ADJ SOT353
+F https://www.diodes.com/assets/Datasheets/ZXRE160.pdf
 $ENDCMP
 #
 $CMP micromatch_female_RA_10
@@ -619,6 +720,51 @@ D connector micromatch female RA 8
 K connector micromatch female RA 8
 $ENDCMP
 #
+$CMP micromatch_female_TOP_ENTRY_locking_10
+D CONN FMALE-ON-BRD 10POS VERT T/H
+K CONN FMALE-ON-BRD 10POS VERT T/H
+$ENDCMP
+#
+$CMP micromatch_female_TOP_ENTRY_locking_12
+D CONN FMALE-ON-BRD 12POS VERT T/H
+K CONN FMALE-ON-BRD 12POS VERT T/H
+$ENDCMP
+#
+$CMP micromatch_female_TOP_ENTRY_locking_14
+D CONN FMALE-ON-BRD 14POS VERT T/H
+K CONN FMALE-ON-BRD 14POS VERT T/H
+$ENDCMP
+#
+$CMP micromatch_female_TOP_ENTRY_locking_16
+D CONN FMALE-ON-BRD 16POS VERT T/H
+K CONN FMALE-ON-BRD 16POS VERT T/H
+$ENDCMP
+#
+$CMP micromatch_female_TOP_ENTRY_locking_18
+D CONN FMALE-ON-BRD 18POS VERT T/H
+K CONN FMALE-ON-BRD 18POS VERT T/H
+$ENDCMP
+#
+$CMP micromatch_female_TOP_ENTRY_locking_20
+D CONN FMALE-ON-BRD 20POS VERT T/H
+K CONN FMALE-ON-BRD 20POS VERT T/H
+$ENDCMP
+#
+$CMP micromatch_female_TOP_ENTRY_locking_4
+D CONN FMALE-ON-BRD 4POS VERT T/H
+K CONN FMALE-ON-BRD 4POS VERT T/H
+$ENDCMP
+#
+$CMP micromatch_female_TOP_ENTRY_locking_6
+D CONN FMALE-ON-BRD 6POS VERT T/H
+K CONN FMALE-ON-BRD 6POS VERT T/H
+$ENDCMP
+#
+$CMP micromatch_female_TOP_ENTRY_locking_8
+D CONN FMALE-ON-BRD 8POS VERT T/H
+K CONN FMALE-ON-BRD 8POS VERT T/H
+$ENDCMP
+#
 $CMP micromatch_male_10
 D connector micromatch male 10
 K connector micromatch male 10
@@ -662,6 +808,11 @@ $ENDCMP
 $CMP micromatch_male_8
 D connector micromatch male 8
 K connector micromatch male 8
+$ENDCMP
+#
+$CMP mx150L_2
+D mx150L_2
+K mx150L conn connector mx
 $ENDCMP
 #
 #End Doc Library
