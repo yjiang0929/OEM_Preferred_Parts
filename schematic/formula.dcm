@@ -18,7 +18,7 @@ $ENDCMP
 #
 $CMP 5K
 D 5k 1% 35W Power Resistor TO-263 DPAK
-K r res resistor power 
+K r res resistor power
 F https://riedon.com/media/pdf/PFS35.pdf
 $ENDCMP
 #
@@ -443,6 +443,26 @@ $ENDCMP
 $CMP R_0_Jumper
 D Res 0 2512 3W Jumper
 K r res resistor
+$ENDCMP
+#
+$CMP R_1.07k
+D R 1.07k .1%
+K R 1.07k .1%
+$ENDCMP
+#
+$CMP R_1.13k
+D R 1.13k .1%
+K R 1.13k .1%
+$ENDCMP
+#
+$CMP R_1.43k
+D RES SMD 1.43KOHM 0.1% 1/10W 0805
+K RES SMD 1.43KOHM 0.1% 1/10W 0805
+$ENDCMP
+#
+$CMP R_1.82M
+D RES SMD 1.82M OHM 1% 1/8W 0805
+K RES SMD 1.82M OHM 1% 1/8W 0805
 $ENDCMP
 #
 $CMP R_100
